@@ -2,22 +2,22 @@
 
 
 
-##Site URL 
----------------------***------------------
+###Site URL 
+
 ```php
 <?php echo site_url(); ?>  
 ```
----------------------***------------------
+### Short Code  
 ```php
 <?php echo do_shortcode('[image-carousel]'); ?>
 ```
----------------------***------------------
+### Condition for front page  
 ```php
 if ( is_front_page() ) {	
 	echo'<h2>Only Displays On The Front Page</h2>';
 }
 ```
----------------------***------------------
+### ACF display fields in other pages
 ```php
 <?php if( have_rows('careers', 59) ): ?>
     <ul>
@@ -27,7 +27,7 @@ if ( is_front_page() ) {
     </ul>
 <?php endif; ?>
 ```
----------------------***------------------
+### ACF display fields with repeater
 ```php
 <?php
 if( have_rows('careers') ):
@@ -39,7 +39,7 @@ else :
 endif;
 ?>
 ```
----------------------***------------------
+### ACF display fields with repeater
 ```php
   <?php if( have_rows('transactions') ): ?>
     <?php while( have_rows('transactions') ): the_row(); ?>
@@ -47,4 +47,3 @@ endif;
     <?php endwhile; ?>
 <?php endif; ?>
 ```
----------------------***------------------
